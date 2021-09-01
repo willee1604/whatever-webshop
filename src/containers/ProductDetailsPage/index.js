@@ -109,15 +109,7 @@ const ProductDetailsPage = (props) => {
               {/* <span>i</span> */}
             </div>
             <div>
-              <p
-                style={{
-                  color: "#212121",
-                  fontSize: "14px",
-                  fontWeight: "600",
-                }}
-              >
-                Available Offers
-              </p>
+              
               <p style={{ display: "flex" }}>
                 <span
                   style={{
