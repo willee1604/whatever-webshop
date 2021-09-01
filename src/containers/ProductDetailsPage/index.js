@@ -95,8 +95,8 @@ const ProductDetailsPage = (props) => {
               </span>
             </div>
             <div className="extraOffer">
-              Extra <BiDollar />
-              4500 off{" "}
+              Sale <BiDollar />
+              
             </div>
             <div className="flexRow priceContainer">
               <span className="price">
