@@ -72,7 +72,7 @@ const ProductDetailsPage = (props) => {
               />
               <MaterialButton
                 title="BUY NOW"
-                bgColor="#fb641b"
+                bgColor="#388e3c"
                 textColor="#ffffff"
                 style={{
                   marginLeft: "5px",
@@ -104,7 +104,7 @@ const ProductDetailsPage = (props) => {
                 {product.productDetails.price}
               </span>
             
-              {/* <span>i</span> */}
+              
             </div>
             <div>
               
