@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./style.css";
-import flipkartLogo from "../../images/logo/flipkart.png";
-import goldenStar from "../../images/logo/golden-star.png";
+import logo from "../../images/whateverlogo.jpg";
 import { IoIosArrowDown, IoIosCart, IoIosSearch } from "react-icons/io";
 import {
   Modal,
@@ -73,20 +72,11 @@ const Header = (props) => {
       <DropdownMenu
         menu={<a className="fullName">{auth.user.fullName}</a>}
         menus={[
-          { label: "My Profile", href: "", icon: null },
-          { label: "SuperCoin Zone", href: "", icon: null },
-          { label: "Flipkart Plus Zone", href: "", icon: null },
           {
             label: "Orders",
             href: `/account/orders`,
             icon: null,
           },
-          { label: "Wishlist", href: "", icon: null },
-          { label: "My Chats", href: "", icon: null },
-          { label: "Coupons", href: "", icon: null },
-          { label: "Rewards", href: "", icon: null },
-          { label: "Notifications", href: "", icon: null },
-          { label: "Gift Cards", href: "", icon: null },
           { label: "Logout", href: "", icon: null, onClick: logout },
         ]}
       />
@@ -108,8 +98,7 @@ const Header = (props) => {
           </a>
         }
         menus={[
-          { label: "My Profile", href: "", icon: null },
-          { label: "Flipkart Plus Zone", href: "", icon: null },
+         
           {
             label: "Orders",
             href: `/account/orders`,
@@ -118,9 +107,7 @@ const Header = (props) => {
               !auth.authenticate && setLoginModal(true);
             },
           },
-          { label: "Wishlist", href: "", icon: null },
-          { label: "Rewards", href: "", icon: null },
-          { label: "Gift Cards", href: "", icon: null },
+          
         ]}
         firstMenu={
           <div className="firstmenu">
@@ -145,10 +132,7 @@ const Header = (props) => {
       <Modal visible={loginModal} onClose={() => setLoginModal(false)}>
         <div className="authContainer">
           <div className="row">
-            <div className="leftspace">
-              <h2>Login</h2>
-              <p>Get access to your Orders, Wishlist and Recommendations</p>
-            </div>
+            
             <div className="rightspace">
               <div className="loginInputContainer">
                 {auth.error && (
@@ -193,15 +177,7 @@ const Header = (props) => {
                   }}
                   onClick={userLogin}
                 />
-                <p style={{ textAlign: "center" }}>OR</p>
-                <MaterialButton
-                  title="Request OTP"
-                  bgColor="#ffffff"
-                  textColor="#2874f0"
-                  style={{
-                    margin: "20px 0",
-                  }}
-                />
+                <img src={logo} height="200px" width="350px"/>
               </div>
             </div>
           </div>
@@ -211,15 +187,9 @@ const Header = (props) => {
         {/* Logo  */}
         <div className="logo">
           <a href="">
-            <img src={flipkartLogo} className="logoimage" alt="" />
-          </a>
-          <a style={{ marginTop: "-10px" }}>
-            <span className="exploreText">Explore</span>
-            <span className="plusText">Plus</span>
-            <img src={goldenStar} className="goldenStar" alt="" />
+            <img src={logo} className="logoimage" alt="" />
           </a>
         </div>
-        {/* logo ends here */}
 
         {/* search component */}
         <div
@@ -230,7 +200,7 @@ const Header = (props) => {
           <div className="searchInputContainer">
             <input
               className="searchInput"
-              placeholder={"search for products, brands and more"}
+              placeholder={"search for products, brands, ..."}
             />
             <div className="searchIconContainer">
               <IoIosSearch
@@ -246,21 +216,6 @@ const Header = (props) => {
         {/* right side menu */}
         <div className="rightMenu">
           {auth.authenticate ? renderLoggedInMenu() : renderNonLoggedInMenu()}
-          <DropdownMenu
-            menu={
-              <a className="more">
-                <span>More</span>
-                <IoIosArrowDown />
-              </a>
-            }
-            menus={[
-              { label: "Notification Preference", href: "", icon: null },
-              { label: "Sell on flipkart", href: "", icon: null },
-              { label: "24x7 Customer Care", href: "", icon: null },
-              { label: "Advertise", href: "", icon: null },
-              { label: "Download App", href: "", icon: null },
-            ]}
-          />
           <div>
             <a href={`/cart`} className="cart">
               <Cart count={Object.keys(cart.cartItems).length} />

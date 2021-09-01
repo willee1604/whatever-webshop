@@ -81,7 +81,7 @@ const OrderDetailsPage = (props) => {
             </div>
             <div className="delMoreActionContainer">
               <div className="delTitle">More Actions</div>
-              <div className="delName">Download Invoice</div>
+              <div className="delName">None</div>
             </div>
           </div>
         </Card>

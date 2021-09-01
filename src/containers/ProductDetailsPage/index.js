@@ -83,26 +83,6 @@ const ProductDetailsPage = (props) => {
           </div>
         </div>
         <div>
-          {/* home > category > subCategory > productName */}
-          <div className="breed">
-            <ul>
-              <li>
-                <a href="#">Home</a>
-                <IoIosArrowForward />
-              </li>
-              <li>
-                <a href="#">Mobiles</a>
-                <IoIosArrowForward />
-              </li>
-              <li>
-                <a href="#">Samsung</a>
-                <IoIosArrowForward />
-              </li>
-              <li>
-                <a href="#">{product.productDetails.name}</a>
-              </li>
-            </ul>
-          </div>
           {/* product description */}
           <div className="productDetails">
             <p className="productTitle">{product.productDetails.name}</p>
